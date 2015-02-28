@@ -1,0 +1,6 @@
+install: make get-deps
+compiler: gcc
+script: 
+  - "gcc hello.c -o hello"
+  - "./hello"
+
