@@ -7,5 +7,6 @@ deploy:
   provider: releases
   file: "hello"
   skip_cleanup: true
+  api_key: $auth
   on:
     tags: true  
