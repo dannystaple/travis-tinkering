@@ -3,4 +3,9 @@ script:
   - "ls -l"
   - "file hello"
   - "./hello"
-  
+deploy:
+  provider: releases
+  file: "hello"
+  skip_cleanup: true
+  on:
+    tags: true  
