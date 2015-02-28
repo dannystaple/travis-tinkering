@@ -2,4 +2,5 @@ script:
   - "gcc hello.c -o hello"
   - "ls -l"
   - "file hello"
-
+  - "./hello"
+  
