@@ -4,9 +4,13 @@ script:
   - "file hello"
   - "./hello"
   - "./build-bootstrap.sh"
+  - "i686-w64-mingw32-gcc src/hello.c -o hello.exe"
+  - "file hello.exe"
 deploy:
   provider: releases
-  file: "hello"
+  file: 
+	- "hello"
+	- "hello.exe"
   skip_cleanup: true
   api_key: $auth
   on:
