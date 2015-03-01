@@ -1,8 +1,9 @@
 script: 
-  - "gcc hello.c -o hello"
+  - "gcc src/hello.c -o hello"
   - "ls -l"
   - "file hello"
   - "./hello"
+  - "./build-bootstrap.sh"
 deploy:
   provider: releases
   file: "hello"
