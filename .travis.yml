@@ -8,9 +8,9 @@ script:
   - "file hello.exe"
 deploy:
   provider: releases
-  file: 
-	- "hello"
-	- "hello.exe"
+  file:
+   - "hello"
+   - "hello.exe"
   skip_cleanup: true
   api_key: $auth
   on:
