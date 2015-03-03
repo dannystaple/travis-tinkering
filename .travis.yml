@@ -1,18 +1,20 @@
 before_install:
-  - "chmod +x build-bootstrap.sh"
+  - "chmod +x *.sh"
   - "sudo ./build-bootstrap.sh"
 script: 
   - "gcc src/hello.c -o hello"
   - "ls -l"
   - "file hello"
   - "./hello"
-  - "i686-w64-mingw32-gcc src/hello.c -o hello.exe"
-  - "file hello.exe"
+  - "./make-win.sh"
+  - "./make-arduino.sh"
 deploy:
   provider: releases
   file:
    - "hello"
    - "hello.exe"
+   - "hello-uno.hex"
+   - "hello-due.hex"
   skip_cleanup: true
   api_key: $auth
   on:

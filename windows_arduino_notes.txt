@@ -1,0 +1,5 @@
+set PATH=%PATH%;c:\Program Files (x86)\Git;c:\Program Files (x86)\Git\bin;c:\Program Files (x86)\Arduino\hardware\tools\avr\bin;c:\Program Files (x86)\Arduino\hardware\tools\avr\i686-pc-cygwin;c:\Program Files (x86)\Arduino\
+
+avrdude.exe   -CC:\Program Files (x86)\Arduino/hardware/tools/avr/etc/avrdude.conf -v -carduino -patmega328 -PCOM12 -b115200 -D -Uflash:w:%CD%\arduino_test.hex:i
+
+avr dude conf: C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf
